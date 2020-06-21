@@ -1,0 +1,190 @@
+:root{
+    font-size: 16px;
+}
+ol,ul{
+    list-style: none;
+    list-style-type: none;
+}
+*{ 
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Montserrat', -apple-system, 
+        BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 
+        "Helvetica Neue", sans-serif;
+ }
+
+$clr-dark-1: #191921;
+$clr-dark-2: #212026;
+$clr-dark-3: #22222c;
+$clr-dark-4: #282a36;
+$clr-dark-5: #343748;
+$clr-dark-6: #9b9fab;
+
+html, body{
+    height: 100%;
+    background-color: $clr-dark-1
+}
+
+//Max Bar width
+$bar-width: 50px;
+
+@mixin outline ($size: 1px) {
+    outline: $size solid red;
+}
+@mixin border ($color: red, $size: 1px) {
+    border: $size solid $color;
+}
+@mixin rotateLabels($breakword: false) {
+    .x-axis > div div{
+        font-size: 10px;
+        transform: rotate(-60deg);
+        transform-origin: 80% 30%;
+        white-space: "normal";
+        word-break: "break-word";
+        word-wrap: "break-word";
+        text-align: "right";
+
+        @if $breakword {
+            max-width: $bar-width;
+        }
+    }
+}
+
+.container{
+    padding: 2rem;
+    width: 1280px;
+    margin: 0 auto;
+    
+    .chart-wrapper{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(10, 60px);
+
+        .y-axis{
+            grid-column: 1 / span 1;
+            grid-row: 1 / -1;
+            background: $clr-dark-3;
+            border-right: 1px solid $clr-dark-5;
+        }
+        
+        .graph, .x-axis{
+            display: flex;
+            
+            > div{
+                flex: 1;
+                max-width: $bar-width * 3;
+            }
+        }
+    
+        .graph{
+            padding: 8px 16px;
+            padding-bottom: 0;
+            grid-column: 2 / -1;
+            grid-row: 1 / -2;
+            background-color: $clr-dark-3;
+            position: relative;
+    
+            .bar-container{
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
+                // @include border($clr-dark-5);
+    
+                > div {
+                    width: 70%;
+                    color: #fff;
+                    text-align: center;
+                    background-color: $clr-dark-5;
+                    font-size: 0.7rem;
+                    position: relative;
+                    
+                    &:empty{
+                        height: 3px;
+                        background: red;
+                    }
+    
+                    span{
+                        position: absolute;
+                        top: -20px;
+                        left: 0;
+    
+                    }
+                }
+            }
+
+            .grid-container{
+                top: 0;
+                left: 0;
+                height: 100%;
+                min-width: 100%;
+                display: flex;
+                @include border($clr-dark-5);
+                position: absolute;
+                flex-direction: column;
+
+                > div{
+                    flex: 1;
+                    border-top: 1px solid $clr-dark-5;
+                }
+            }
+        }
+        
+        .x-axis{
+            grid-column: 2 / -1;
+            background-color: $clr-dark-4;
+            border-top: 1px solid $clr-dark-5;
+            padding: 8px 16px;
+            padding-bottom: 0;
+    
+            > div {
+                // @include border(orange);
+                
+                div{
+                    // @include border(green);
+                    color: $clr-dark-6;
+                    text-align: center;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        &.rotateLabels{
+            @include rotateLabels($breakword: true);
+        }
+    }
+
+    .controls{
+        margin-bottom: 16px;
+        display: flex;
+        
+        > * {
+            height: 40px;
+        }
+
+        select{
+            height: 100%;
+            width: 250px;
+            padding: 8px 16px;
+            background: white;
+        }
+        .count-display{
+            color: #eee;
+            display: grid;
+            padding: 0 0.8rem;
+            margin-left: 0.5rem;
+            place-content: center;
+            // @include border(#eee, 2px);
+            background-color: $clr-dark-5;
+        }
+    }
+
+    .display{
+        margin-top: auto;
+        color: #888;
+    }
+}
