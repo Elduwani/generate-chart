@@ -1,5 +1,4 @@
 const canvas = document.getElementById("canvas")
-const wrapper_node = document.querySelector(".wrapper")
 const cSize = 700
 canvas.height = cSize
 canvas.width = cSize
@@ -28,8 +27,9 @@ function lines() {
 
     for (let i = 0; i <= count; i++) {
         let x = size * i,
-            y = Math.floor(Math.random() * (cSize / 1.5)) + size,
-            offset = i === 0 ? 10 : i === 10 ? -10 : 0
+            y = Math.floor(Math.random() * (cSize / 2)) + size,
+            value = 30,
+            offset = i === 0 ? value : i === 10 ? -value : 0
 
         x = x + offset
         c.lineTo(x, y)
@@ -40,19 +40,28 @@ function lines() {
     c.closePath()
 
     //draw circles...
-    pointsArray.forEach(p => {
-        const radius = 3 + (Math.random() * 10)
-        const aboveMidpoint = p.y > cSize / 2
+    pointsArray.forEach((p, i) => {
+        let offsetValue = 20,
+            nextY = pointsArray[i + 1] ? pointsArray[i + 1].y : 0,
+            // radius = 3 + (Math.random() * 8),
+            radius = 8,
+            trendingUp = p.y > nextY
 
         c.beginPath()
-        c.strokeStyle = clr_green
-        c.fillStyle = aboveMidpoint ? clr_green : clr_bgColor
+        c.strokeStyle = clr_green_2
+        c.fillStyle = clr_bgColor
         c.arc(p.x, p.y, radius, 0, Math.PI * 2, false)
         c.fill()
 
         c.fillStyle = "white"
-        c.font = `10px Roboto, Montserrat, san-serif`;
-        c.fillText(String(p.y), p.x, p.y - 20);
+        c.font = `11px Roboto, Montserrat, san-serif`;
+        c.textAlign = "center"
+        c.textBaseline = "middle"
+        c.fillText(
+            String(cSize - p.y),
+            p.x,
+            trendingUp ? p.y + offsetValue : p.y - offsetValue
+        );
 
         c.stroke()
         c.closePath()

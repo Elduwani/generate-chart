@@ -187,10 +187,8 @@ function generateBars() {
     grid_node.classList.add("grid-container")
 
     let max = 2500000, count = 0
-    // console.log(map)
 
     state.map.forEach((value) => {
-        // console.log(value)
         const wrapper = document.createElement("div")
         wrapper.classList.add("bar-container")
         const bar = document.createElement("div")
