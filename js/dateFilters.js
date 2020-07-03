@@ -86,7 +86,6 @@ function getPreviousCalendarDays(num = 60) {
          * The purpose of this section is to group months or weeks into separate arrays
          * 
          * 
-         * 
         */
         if (splitInto === "weekly") {
             const newWeek = currentDate.getDay() // --> 0 Sun - 6 Sat

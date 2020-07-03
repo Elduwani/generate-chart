@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin line($color: red) {
+    border: 1px solid $color;
+}
+
+$clr_bgColor: #54447b;
+$clr_bgColor_light: #695699;
+$clr_green: #49b47e;
+$clr_green_2: #94dd4d;
+$clr_yellow: #ffd944;
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background-color: #54447b;
+
+    canvas{
+        @include line($clr_bgColor_light);
+        background-color: #54447b;
+    }
+}
