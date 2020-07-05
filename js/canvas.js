@@ -1,6 +1,6 @@
-const canvas = document.getElementById("canvas")
+const canvas = document.createElement("canvas")
 const cSize = 700
-canvas.height = cSize
+canvas.height = cSize / 1.2
 canvas.width = cSize
 
 const c = canvas.getContext("2d")
@@ -13,10 +13,10 @@ const clr_yellow = "#ffd944"
 
 // // c.strokeRect(20, 20, 20, 20)
 
-displayGrid()
-lines()
+// displayGrid()
+// drawChart()
 
-function lines() {
+export function drawLineChart() {
     let count = 10,
         size = Math.floor(cSize / count),
         pointsArray = []
@@ -69,7 +69,7 @@ function lines() {
 }
 
 //draw grid guides on the canvas
-function displayGrid() {
+export function displayGrid() {
     let count = 10
 
     for (let i = 0; i <= count; i++) {

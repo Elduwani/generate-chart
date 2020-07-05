@@ -1,11 +1,8 @@
 import transactions from "./data.js"
+import { drawLineChart, displayGrid } from "./canvas.js"
+
 const chartWrapper_node = document.querySelector(".chart-wrapper")
 
-const state = {
-    count: 0,
-    map: new Map(),
-    mode: "daily",
-}
 const filterOptions = [
     { value: 14, label: `Last 2 Weeks` },
     { value: 21, label: `Last 3 Weeks` },
@@ -17,6 +14,14 @@ const filterOptions = [
     { value: "this_year", label: `This Year` },
     { value: null, label: `All Time` },
 ]
+
+const state = {
+    count: 0,
+    yLength: 10,
+    maxAmount: 0,
+    map: new Map(),
+    mode: "daily",
+}
 
 displayChart(filterOptions[0].value)
 generateSelect(filterOptions)
@@ -47,7 +52,7 @@ function displayChart(count) {
     */
     aggregateTransactions()
     // This must be called last as it depends on {state.data} to be updated
-    generateBars()
+    generateColumns()
 
     const count_display_node = document.querySelector(".count-display")
     count_display_node.textContent = `Data: ${state.count} - Entries: ${state.map.size}`
@@ -136,13 +141,18 @@ function getPreviousCalendarDays(num = 60) {
         setKeyOfArrays(tempArr)
     }
 
+    // console.log("getPreviousCalendarDays", state.map)
+
     return dates
 }
 
 function aggregateTransactions() {
+    // console.log(state.map)
     const x_axis = document.querySelector(".x-axis")
     x_axis.innerHTML = ""
 
+    let maxAmount = 0
+    //Populate x-axis
     state.map.forEach((value, key) => {
         const div = document.createElement("div")
         const div2 = document.createElement("div")
@@ -166,27 +176,45 @@ function aggregateTransactions() {
             }
         })
 
+        //update maximum amount
+        const { total } = state.map.get(key)
+        if (total > maxAmount) {
+            maxAmount = total
+        }
+
         div2.textContent = key
         div.appendChild(div2)
         x_axis.appendChild(div)
     })
 
-    if (
-        ["weekly", "monthly"].includes(state.mode) && state.map.size > 10
-        || state.mode === "daily" && state.map.size > 22
-    ) {
+    if (["weekly", "monthly"].includes(state.mode) && state.map.size > 10
+        || state.mode === "daily" && state.map.size > 22) {
         chartWrapper_node.classList.add("rotateLabels")
-    } else chartWrapper_node.classList.remove("rotateLabels")
+    } else {
+        chartWrapper_node.classList.remove("rotateLabels")
+    }
+
+    /**
+     * Populate y-axis
+    */
+    const [yArray, limit] = getClosestNumArray(maxAmount, state.yLength)
+    const y_axis = document.querySelector(".y-axis")
+    y_axis.innerHTML = ""
+    state.maxAmount = limit
+
+    yArray.forEach(n => {
+        const div = document.createElement("div")
+        div.textContent = metricPrefix(n)
+        y_axis.appendChild(div)
+    })
 }
 
-function generateBars() {
+function generateColumns() {
     const graph_wrapper_node = document.querySelector(".graph")
     graph_wrapper_node.innerHTML = ""
 
     const grid_node = document.createElement("div")
     grid_node.classList.add("grid-container")
-
-    let max = 2500000, count = 0
 
     state.map.forEach((value) => {
         const wrapper = document.createElement("div")
@@ -198,7 +226,7 @@ function generateBars() {
         const amnt = value.total
 
         if (amnt > 0) {
-            const height = Math.trunc((amnt / max) * 100)
+            const height = Math.trunc((amnt / state.maxAmount) * 100)
             span.textContent = amnt.toLocaleString("en-GB")
             bar.appendChild(span)
             bar.style.height = height + "%"
@@ -211,7 +239,8 @@ function generateBars() {
     /**
      * Generate 10 grid lines
     */
-    while (count < 10) {
+    let count = 0
+    while (count < state.yLength) {
         grid_node.appendChild(document.createElement("div"))
         count++
     }
@@ -236,7 +265,7 @@ function getElapsedDaysInYear(year = 2020) {
 
     const oneDay = 1000 * 60 * 60 * 24
     const milliseconds = now - then
-    return Math.round(milliseconds / oneDay)
+    return Math.round(milliseconds / oneDay) - 1
 }
 
 function generateSelect(options) {
@@ -255,4 +284,30 @@ function generateSelect(options) {
     })
 
     select_node.appendChild(select)
+}
+
+function getClosestNumArray(num, arrLength) {
+    let len = String(num).length,
+        n1 = String(num)[0],
+        max = parseInt((+n1 + 1) + "0".repeat(len - 1))
+
+    let array = [],
+        unit = max / arrLength,
+        count = 1;
+
+    while (count <= arrLength) {
+        array.push(count * unit)
+        count++
+    }
+
+    return [array, max]
+}
+
+function metricPrefix(number) {
+    const num = Math.abs(number)
+    //Must start from largest number so it doesn't return lower true condition
+    if (num > 999999999) return Math.sign(num) * ((num / 1000000000).toFixed(2)) + 'B'
+    if (num > 999999) return Math.sign(num) * ((num / 1000000).toFixed(2)) + 'M'
+    if (num > 999) return Math.sign(num) * ((num / 1000).toFixed(2)) + 'k'
+    if (num < 999) return Math.sign(num) * num
 }

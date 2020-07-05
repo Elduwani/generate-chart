@@ -3,6 +3,968 @@ export default {
     "message": "Transactions retrieved",
     "data": [
         {
+            "id": 733279587,
+            "domain": "test",
+            "status": "success",
+            "reference": "53adb2cb-3837-546d-b6ed-81ef8a4d8895",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-07-05T00:00:18.000Z",
+            "created_at": "2020-07-05T00:00:16.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24413370,
+                "first_name": "Bola",
+                "last_name": "Oluwayemi",
+                "email": "boluwayo@hey.com",
+                "phone": "0938845822",
+                "metadata": {
+                    "gender": "F",
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_syseere1znwy21v",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_6afyo5v6vv",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-07-05T00:00:18.000Z",
+            "createdAt": "2020-07-05T00:00:16.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 733279569,
+            "domain": "test",
+            "status": "success",
+            "reference": "138a1800-5a54-5d64-81a7-fbe780c898a6",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-07-05T00:00:20.000Z",
+            "created_at": "2020-07-05T00:00:15.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24413370,
+                "first_name": "Bola",
+                "last_name": "Oluwayemi",
+                "email": "boluwayo@hey.com",
+                "phone": "0938845822",
+                "metadata": {
+                    "gender": "F",
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_syseere1znwy21v",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_npcaf01rqs",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-07-05T00:00:20.000Z",
+            "createdAt": "2020-07-05T00:00:15.000Z",
+            "requested_amount": 3000000
+        },
+        {
+            "id": 733279549,
+            "domain": "test",
+            "status": "success",
+            "reference": "31016b9b-4421-5c65-9c7c-a927ffa24bbb",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-07-05T00:00:16.000Z",
+            "created_at": "2020-07-05T00:00:15.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24400059,
+                "first_name": "Elduwani",
+                "last_name": "O.",
+                "email": "el@hey.com",
+                "phone": "09092767912",
+                "metadata": {
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_rtk32xjyt1m6s6j",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_4lzvxi5a68",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-07-05T00:00:16.000Z",
+            "createdAt": "2020-07-05T00:00:15.000Z",
+            "requested_amount": 3000000
+        },
+        {
+            "id": 733279136,
+            "domain": "test",
+            "status": "success",
+            "reference": "566f76ec-91d0-5ef0-84fe-f73ae6e387ee",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-07-05T00:00:13.000Z",
+            "created_at": "2020-07-05T00:00:10.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24413255,
+                "first_name": "Edward",
+                "last_name": "Hussein",
+                "email": "johndoe@email.com",
+                "phone": "",
+                "metadata": {
+                    "state": "Niger",
+                    "investment_start_date": "2018-04-24"
+                },
+                "customer_code": "CUS_g6hgv7c9x43z3er",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_f69ae551v6",
+                "bin": "408408",
+                "last4": "0409",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-07-05T00:00:13.000Z",
+            "createdAt": "2020-07-05T00:00:10.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 732173624,
+            "domain": "test",
+            "status": "success",
+            "reference": "c228c6e9-bb3b-5e72-9194-2bc1f0e30ebd",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-07-04T00:00:19.000Z",
+            "created_at": "2020-07-04T00:00:16.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24400059,
+                "first_name": "Elduwani",
+                "last_name": "O.",
+                "email": "el@hey.com",
+                "phone": "09092767912",
+                "metadata": {
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_rtk32xjyt1m6s6j",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_bgsftzp56h",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-07-04T00:00:19.000Z",
+            "createdAt": "2020-07-04T00:00:16.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 731103843,
+            "domain": "test",
+            "status": "success",
+            "reference": "9b9577e6-8799-54a0-ae1f-19c2d4660a70",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-07-03T00:00:16.000Z",
+            "created_at": "2020-07-03T00:00:13.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24512847,
+                "first_name": "Saul",
+                "last_name": "Goodman",
+                "email": "saul@test.com",
+                "phone": "09058746816",
+                "metadata": {
+                    "gender": "M",
+                    "address": "290 Herbert Macualey, Yaba",
+                    "state": "Abuja",
+                    "next_of_kin_name": "Kim Wesley",
+                    "next_of_kin_address": "Parkview Estate, Ikoyi",
+                    "next_of_kin_email": "kim@hey.com",
+                    "next_of_kin_state": "Lagos",
+                    "next_of_kin_phone": "344432122",
+                    "investment_start_date": "2019-06-01"
+                },
+                "customer_code": "CUS_sxho6q7px2gpxo9",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_d4thf1wz9j",
+                "bin": "408408",
+                "last4": "0409",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-07-03T00:00:16.000Z",
+            "createdAt": "2020-07-03T00:00:13.000Z",
+            "requested_amount": 3000000
+        },
+        {
+            "id": 727775430,
+            "domain": "test",
+            "status": "success",
+            "reference": "0133d6c8-c0cf-5123-bb2c-d41a5a9e060e",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-30T00:00:11.000Z",
+            "created_at": "2020-06-30T00:00:08.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24679504,
+                "first_name": "Busayo",
+                "last_name": "Sadiq",
+                "email": "demola@email.com",
+                "phone": "",
+                "metadata": {
+                    "state": "Delta",
+                    "investment_start_date": "2019-12-25"
+                },
+                "customer_code": "CUS_1z0zbxu769gjlig",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_cvpuoroy7k",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-30T00:00:11.000Z",
+            "createdAt": "2020-06-30T00:00:08.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 727775400,
+            "domain": "test",
+            "status": "success",
+            "reference": "af60d44a-06b8-57d2-bbbf-83784d4e2a87",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-30T00:00:09.000Z",
+            "created_at": "2020-06-30T00:00:08.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24679487,
+                "first_name": "Asher",
+                "last_name": "Unoroh",
+                "email": "rain@email.com",
+                "phone": "0992883777",
+                "metadata": {
+                    "gender": "M",
+                    "state": "Lagos",
+                    "investment_start_date": "2020-02-02"
+                },
+                "customer_code": "CUS_j8snl4s1ove0ki5",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_1p7xgx0ve9",
+                "bin": "408408",
+                "last4": "0409",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-30T00:00:09.000Z",
+            "createdAt": "2020-06-30T00:00:08.000Z",
+            "requested_amount": 3000000
+        },
+        {
+            "id": 725721317,
+            "domain": "test",
+            "status": "success",
+            "reference": "ba61d20f-d9be-5db5-ae20-bce3fc59bd19",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-28T00:00:33.000Z",
+            "created_at": "2020-06-28T00:00:32.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24413255,
+                "first_name": "Edward",
+                "last_name": "Hussein",
+                "email": "johndoe@email.com",
+                "phone": "",
+                "metadata": {
+                    "state": "Niger",
+                    "investment_start_date": "2018-04-24"
+                },
+                "customer_code": "CUS_g6hgv7c9x43z3er",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_f69ae551v6",
+                "bin": "408408",
+                "last4": "0409",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-28T00:00:33.000Z",
+            "createdAt": "2020-06-28T00:00:32.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 725721019,
+            "domain": "test",
+            "status": "success",
+            "reference": "88fa11ad-2911-5f59-ab79-d69273df8b0d",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-28T00:00:29.000Z",
+            "created_at": "2020-06-28T00:00:28.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24400059,
+                "first_name": "Elduwani",
+                "last_name": "O.",
+                "email": "el@hey.com",
+                "phone": "09092767912",
+                "metadata": {
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_rtk32xjyt1m6s6j",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_4lzvxi5a68",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-28T00:00:29.000Z",
+            "createdAt": "2020-06-28T00:00:28.000Z",
+            "requested_amount": 3000000
+        },
+        {
+            "id": 725720740,
+            "domain": "test",
+            "status": "success",
+            "reference": "9abc7244-7959-5e5e-868e-84be5e7814f4",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-28T00:00:24.000Z",
+            "created_at": "2020-06-28T00:00:23.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24413370,
+                "first_name": "Bola",
+                "last_name": "Oluwayemi",
+                "email": "boluwayo@hey.com",
+                "phone": "0938845822",
+                "metadata": {
+                    "gender": "F",
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_syseere1znwy21v",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_6afyo5v6vv",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-28T00:00:24.000Z",
+            "createdAt": "2020-06-28T00:00:23.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 725720214,
+            "domain": "test",
+            "status": "success",
+            "reference": "be051f7e-c0cc-5823-8b33-11b5a8ff808e",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-28T00:00:17.000Z",
+            "created_at": "2020-06-28T00:00:15.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24413370,
+                "first_name": "Bola",
+                "last_name": "Oluwayemi",
+                "email": "boluwayo@hey.com",
+                "phone": "0938845822",
+                "metadata": {
+                    "gender": "F",
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_syseere1znwy21v",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_npcaf01rqs",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-28T00:00:17.000Z",
+            "createdAt": "2020-06-28T00:00:15.000Z",
+            "requested_amount": 3000000
+        },
+        {
+            "id": 725720154,
+            "domain": "test",
+            "status": "success",
+            "reference": "426c12ca-9907-5fae-95e0-2b72122efe5f",
+            "amount": 15000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-28T00:00:16.000Z",
+            "created_at": "2020-06-28T00:00:14.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 200000,
+            "fees_split": null,
+            "customer": {
+                "id": 24512847,
+                "first_name": "Saul",
+                "last_name": "Goodman",
+                "email": "saul@test.com",
+                "phone": "09058746816",
+                "metadata": {
+                    "gender": "M",
+                    "address": "290 Herbert Macualey, Yaba",
+                    "state": "Abuja",
+                    "next_of_kin_name": "Kim Wesley",
+                    "next_of_kin_address": "Parkview Estate, Ikoyi",
+                    "next_of_kin_email": "kim@hey.com",
+                    "next_of_kin_state": "Lagos",
+                    "next_of_kin_phone": "344432122",
+                    "investment_start_date": "2019-06-01"
+                },
+                "customer_code": "CUS_sxho6q7px2gpxo9",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_9dqq95meuz",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-28T00:00:16.000Z",
+            "createdAt": "2020-06-28T00:00:14.000Z",
+            "requested_amount": 15000000
+        },
+        {
+            "id": 724515823,
+            "domain": "test",
+            "status": "success",
+            "reference": "fdb16cb3-35f5-5522-9c63-1490ace1a140",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-27T00:00:14.000Z",
+            "created_at": "2020-06-27T00:00:12.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24400059,
+                "first_name": "Elduwani",
+                "last_name": "O.",
+                "email": "el@hey.com",
+                "phone": "09092767912",
+                "metadata": {
+                    "state": "Lagos",
+                    "investment_start_date": "2020-05-24"
+                },
+                "customer_code": "CUS_rtk32xjyt1m6s6j",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_bgsftzp56h",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-27T00:00:14.000Z",
+            "createdAt": "2020-06-27T00:00:12.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 723478798,
+            "domain": "test",
+            "status": "success",
+            "reference": "c2612b6e-4de1-5e09-8c5b-84a44aba9234",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-26T00:00:11.000Z",
+            "created_at": "2020-06-26T00:00:10.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "create"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24512847,
+                "first_name": "Saul",
+                "last_name": "Goodman",
+                "email": "saul@test.com",
+                "phone": "09058746816",
+                "metadata": {
+                    "gender": "M",
+                    "address": "290 Herbert Macualey, Yaba",
+                    "state": "Abuja",
+                    "next_of_kin_name": "Kim Wesley",
+                    "next_of_kin_address": "Parkview Estate, Ikoyi",
+                    "next_of_kin_email": "kim@hey.com",
+                    "next_of_kin_state": "Lagos",
+                    "next_of_kin_phone": "344432122",
+                    "investment_start_date": "2019-06-01"
+                },
+                "customer_code": "CUS_sxho6q7px2gpxo9",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_d4thf1wz9j",
+                "bin": "408408",
+                "last4": "0409",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-26T00:00:11.000Z",
+            "createdAt": "2020-06-26T00:00:10.000Z",
+            "requested_amount": 3000000
+        },
+        {
+            "id": 720342916,
+            "domain": "test",
+            "status": "success",
+            "reference": "fda2859a-d564-51e1-8167-0aaa2f1f75ea",
+            "amount": 10000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-23T00:00:16.000Z",
+            "created_at": "2020-06-23T00:00:13.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 160000,
+            "fees_split": null,
+            "customer": {
+                "id": 24679504,
+                "first_name": "Busayo",
+                "last_name": "Sadiq",
+                "email": "demola@email.com",
+                "phone": "",
+                "metadata": {
+                    "state": "Delta",
+                    "investment_start_date": "2019-12-25"
+                },
+                "customer_code": "CUS_1z0zbxu769gjlig",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_cvpuoroy7k",
+                "bin": "408408",
+                "last4": "4081",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-23T00:00:16.000Z",
+            "createdAt": "2020-06-23T00:00:13.000Z",
+            "requested_amount": 10000000
+        },
+        {
+            "id": 720342914,
+            "domain": "test",
+            "status": "success",
+            "reference": "bed2f8a8-0cdf-5dd9-adab-49799231e9e7",
+            "amount": 3000000,
+            "message": null,
+            "gateway_response": "Approved",
+            "paid_at": "2020-06-23T00:00:18.000Z",
+            "created_at": "2020-06-23T00:00:13.000Z",
+            "channel": "card",
+            "currency": "NGN",
+            "ip_address": null,
+            "metadata": {
+                "invoice_action": "update"
+            },
+            "log": null,
+            "fees": 55000,
+            "fees_split": null,
+            "customer": {
+                "id": 24679487,
+                "first_name": "Asher",
+                "last_name": "Unoroh",
+                "email": "rain@email.com",
+                "phone": "0992883777",
+                "metadata": {
+                    "gender": "M",
+                    "state": "Lagos",
+                    "investment_start_date": "2020-02-02"
+                },
+                "customer_code": "CUS_j8snl4s1ove0ki5",
+                "risk_action": "default"
+            },
+            "authorization": {
+                "authorization_code": "AUTH_1p7xgx0ve9",
+                "bin": "408408",
+                "last4": "0409",
+                "exp_month": "12",
+                "exp_year": "2020",
+                "channel": "card",
+                "card_type": "visa DEBIT",
+                "bank": "Test Bank",
+                "country_code": "NG",
+                "brand": "visa",
+                "reusable": true,
+                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
+                "account_name": null
+            },
+            "plan": {},
+            "split": {},
+            "subaccount": {},
+            "order_id": null,
+            "paidAt": "2020-06-23T00:00:18.000Z",
+            "createdAt": "2020-06-23T00:00:13.000Z",
+            "requested_amount": 3000000
+        },
+        {
             "id": 718324788,
             "domain": "test",
             "status": "success",
@@ -2010,1215 +2972,11 @@ export default {
             "paidAt": "2020-05-29T03:55:55.000Z",
             "createdAt": "2020-05-29T03:55:47.000Z",
             "requested_amount": 15000000
-        },
-        {
-            "id": 697527191,
-            "domain": "test",
-            "status": "success",
-            "reference": "T501066430771569",
-            "amount": 3000000,
-            "message": "test-3ds",
-            "gateway_response": "[Test] Approved",
-            "paid_at": "2020-05-29T03:54:07.000Z",
-            "created_at": "2020-05-29T03:53:56.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "102.68.110.51",
-            "metadata": {
-                "custom_filters": {
-                    "recurring": true
-                },
-                "referrer": "https://paystack.com/pay/jbhzuncog0"
-            },
-            "log": {
-                "start_time": 1590724436,
-                "time_spent": 12,
-                "attempts": 1,
-                "authentication": "3DS",
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 7
-                    },
-                    {
-                        "type": "auth",
-                        "message": "Authentication Required: 3DS",
-                        "time": 8
-                    },
-                    {
-                        "type": "action",
-                        "message": "Third-party authentication window opened",
-                        "time": 9
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 11
-                    },
-                    {
-                        "type": "action",
-                        "message": "Third-party authentication window closed",
-                        "time": 12
-                    }
-                ]
-            },
-            "fees": 55000,
-            "fees_split": null,
-            "customer": {
-                "id": 24512847,
-                "first_name": "Saul",
-                "last_name": "Goodman",
-                "email": "saul@test.com",
-                "phone": "09058746816",
-                "metadata": {
-                    "gender": "M",
-                    "address": "290 Herbert Macualey, Yaba",
-                    "state": "Abuja",
-                    "next_of_kin_name": "Kim Wesley",
-                    "next_of_kin_address": "Parkview Estate, Ikoyi",
-                    "next_of_kin_email": "kim@hey.com",
-                    "next_of_kin_state": "Lagos",
-                    "next_of_kin_phone": "344432122",
-                    "investment_start_date": "2019-06-01"
-                },
-                "customer_code": "CUS_sxho6q7px2gpxo9",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_d4thf1wz9j",
-                "bin": "408408",
-                "last4": "0409",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2020-05-29T03:54:07.000Z",
-            "createdAt": "2020-05-29T03:53:56.000Z",
-            "requested_amount": 3000000
-        },
-        {
-            "id": 693628798,
-            "domain": "test",
-            "status": "success",
-            "reference": "T062237033072271",
-            "amount": 3000000,
-            "message": null,
-            "gateway_response": "Successful",
-            "paid_at": "2020-05-24T13:21:28.000Z",
-            "created_at": "2020-05-24T13:21:20.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "102.68.110.51",
-            "metadata": {
-                "custom_filters": {
-                    "recurring": true
-                },
-                "referrer": "https://paystack.com/pay/jbhzuncog0"
-            },
-            "log": {
-                "start_time": 1590326481,
-                "time_spent": 8,
-                "attempts": 1,
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 7
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 8
-                    }
-                ]
-            },
-            "fees": 55000,
-            "fees_split": null,
-            "customer": {
-                "id": 24400059,
-                "first_name": "Elduwani",
-                "last_name": "O.",
-                "email": "el@hey.com",
-                "phone": "09092767912",
-                "metadata": {
-                    "state": "Lagos",
-                    "investment_start_date": "2020-05-24"
-                },
-                "customer_code": "CUS_rtk32xjyt1m6s6j",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_4lzvxi5a68",
-                "bin": "408408",
-                "last4": "4081",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2020-05-24T13:21:28.000Z",
-            "createdAt": "2020-05-24T13:21:20.000Z",
-            "requested_amount": 3000000
-        },
-        {
-            "id": 693627641,
-            "domain": "test",
-            "status": "success",
-            "reference": "T271699058413002",
-            "amount": 3000000,
-            "message": null,
-            "gateway_response": "Successful",
-            "paid_at": "2020-05-24T13:19:12.000Z",
-            "created_at": "2020-05-24T13:19:09.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "102.68.110.51",
-            "metadata": {
-                "custom_filters": {
-                    "recurring": true
-                },
-                "referrer": "https://paystack.com/pay/jbhzuncog0"
-            },
-            "log": {
-                "start_time": 1590326350,
-                "time_spent": 4,
-                "attempts": 1,
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 3
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 4
-                    }
-                ]
-            },
-            "fees": 55000,
-            "fees_split": null,
-            "customer": {
-                "id": 24413370,
-                "first_name": "Bola",
-                "last_name": "Oluwayemi",
-                "email": "boluwayo@hey.com",
-                "phone": "0938845822",
-                "metadata": {
-                    "gender": "F",
-                    "state": "Lagos",
-                    "investment_start_date": "2020-05-24"
-                },
-                "customer_code": "CUS_syseere1znwy21v",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_ota5d3u126",
-                "bin": "408408",
-                "last4": "4081",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2020-05-24T13:19:12.000Z",
-            "createdAt": "2020-05-24T13:19:09.000Z",
-            "requested_amount": 3000000
-        },
-        {
-            "id": 693626001,
-            "domain": "test",
-            "status": "success",
-            "reference": "T598333414080984",
-            "amount": 3000000,
-            "message": null,
-            "gateway_response": "Successful",
-            "paid_at": "2020-05-24T13:15:57.000Z",
-            "created_at": "2020-05-24T13:15:53.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "102.68.110.51",
-            "metadata": {
-                "custom_filters": {
-                    "recurring": true
-                },
-                "referrer": "https://paystack.com/pay/jbhzuncog0"
-            },
-            "log": {
-                "start_time": 1590326154,
-                "time_spent": 4,
-                "attempts": 1,
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 3
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 4
-                    }
-                ]
-            },
-            "fees": 55000,
-            "fees_split": null,
-            "customer": {
-                "id": 24413370,
-                "first_name": "Bola",
-                "last_name": "Oluwayemi",
-                "email": "boluwayo@hey.com",
-                "phone": "0938845822",
-                "metadata": {
-                    "gender": "F",
-                    "state": "Lagos",
-                    "investment_start_date": "2020-05-24"
-                },
-                "customer_code": "CUS_syseere1znwy21v",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_npcaf01rqs",
-                "bin": "408408",
-                "last4": "4081",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2020-05-24T13:15:57.000Z",
-            "createdAt": "2020-05-24T13:15:53.000Z",
-            "requested_amount": 3000000
-        },
-        {
-            "id": 693622848,
-            "domain": "test",
-            "status": "success",
-            "reference": "T054944876922321",
-            "amount": 10000000,
-            "message": null,
-            "gateway_response": "Successful",
-            "paid_at": "2020-05-24T13:09:57.000Z",
-            "created_at": "2020-05-24T13:09:52.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "102.68.110.51",
-            "metadata": {
-                "custom_filters": {
-                    "recurring": true
-                },
-                "referrer": "https://paystack.com/pay/jmo1-sg0gs"
-            },
-            "log": {
-                "start_time": 1590325792,
-                "time_spent": 6,
-                "attempts": 1,
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 5
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 6
-                    }
-                ]
-            },
-            "fees": 160000,
-            "fees_split": null,
-            "customer": {
-                "id": 24413370,
-                "first_name": "Bola",
-                "last_name": "Oluwayemi",
-                "email": "boluwayo@hey.com",
-                "phone": "0938845822",
-                "metadata": {
-                    "gender": "F",
-                    "state": "Lagos",
-                    "investment_start_date": "2020-05-24"
-                },
-                "customer_code": "CUS_syseere1znwy21v",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_6afyo5v6vv",
-                "bin": "408408",
-                "last4": "4081",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2020-05-24T13:09:57.000Z",
-            "createdAt": "2020-05-24T13:09:52.000Z",
-            "requested_amount": 10000000
-        },
-        {
-            "id": 693620464,
-            "domain": "test",
-            "status": "success",
-            "reference": "T056958257259923",
-            "amount": 10000000,
-            "message": "test-3ds",
-            "gateway_response": "[Test] Approved",
-            "paid_at": "2020-05-24T13:05:47.000Z",
-            "created_at": "2020-05-24T13:05:13.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "102.68.110.51",
-            "metadata": {
-                "custom_filters": {
-                    "recurring": true
-                },
-                "referrer": "https://paystack.com/pay/jmo1-sg0gs"
-            },
-            "log": {
-                "start_time": 1590325514,
-                "time_spent": 35,
-                "attempts": 1,
-                "authentication": "3DS",
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 25
-                    },
-                    {
-                        "type": "auth",
-                        "message": "Authentication Required: 3DS",
-                        "time": 27
-                    },
-                    {
-                        "type": "action",
-                        "message": "Third-party authentication window opened",
-                        "time": 32
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 35
-                    },
-                    {
-                        "type": "action",
-                        "message": "Third-party authentication window closed",
-                        "time": 35
-                    }
-                ]
-            },
-            "fees": 160000,
-            "fees_split": null,
-            "customer": {
-                "id": 24413255,
-                "first_name": "Edward",
-                "last_name": "Hussein",
-                "email": "johndoe@email.com",
-                "phone": "",
-                "metadata": {
-                    "state": "Niger",
-                    "investment_start_date": "2018-04-24"
-                },
-                "customer_code": "CUS_g6hgv7c9x43z3er",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_f69ae551v6",
-                "bin": "408408",
-                "last4": "0409",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_sLNqsOpk57VmyOp0qvmr",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2020-05-24T13:05:47.000Z",
-            "createdAt": "2020-05-24T13:05:13.000Z",
-            "requested_amount": 10000000
-        },
-        {
-            "id": 693310673,
-            "domain": "test",
-            "status": "success",
-            "reference": "T766497539966850",
-            "amount": 10000000,
-            "message": null,
-            "gateway_response": "Successful",
-            "paid_at": "2020-05-23T23:09:06.000Z",
-            "created_at": "2020-05-23T23:08:54.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "102.68.110.51",
-            "metadata": {
-                "custom_filters": {
-                    "recurring": true
-                },
-                "referrer": "https://paystack.com/pay/jmo1-sg0gs"
-            },
-            "log": {
-                "start_time": 1590275334,
-                "time_spent": 13,
-                "attempts": 1,
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 11
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 13
-                    }
-                ]
-            },
-            "fees": 160000,
-            "fees_split": null,
-            "customer": {
-                "id": 24400059,
-                "first_name": "Elduwani",
-                "last_name": "O.",
-                "email": "el@hey.com",
-                "phone": "09092767912",
-                "metadata": {
-                    "state": "Lagos",
-                    "investment_start_date": "2020-05-24"
-                },
-                "customer_code": "CUS_rtk32xjyt1m6s6j",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_bgsftzp56h",
-                "bin": "408408",
-                "last4": "4081",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2020-05-23T23:09:06.000Z",
-            "createdAt": "2020-05-23T23:08:54.000Z",
-            "requested_amount": 10000000
-        },
-        {
-            "id": 365533376,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "ct.QzIkLHUV=Dw8",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-12-02T09:20:59.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": {
-                "start_time": 1575278460,
-                "time_spent": 18,
-                "attempts": 0,
-                "errors": 0,
-                "success": false,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Set payment method to: bank",
-                        "time": 18
-                    }
-                ]
-            },
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-12-02T09:20:59.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361278683,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "kBHBB5s-DEUbs74",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T19:21:01.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": null,
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T19:21:01.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361265076,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "kixluW=7OdG1ayz",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T19:12:54.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": null,
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T19:12:54.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361258960,
-            "domain": "test",
-            "status": "success",
-            "reference": "TuCoeY5YqppSCJX",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "Successful",
-            "paid_at": "2019-11-29T19:10:12.000Z",
-            "created_at": "2019-11-29T19:09:21.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": {
-                "start_time": 1575054560,
-                "time_spent": 51,
-                "attempts": 1,
-                "errors": 0,
-                "success": true,
-                "mobile": false,
-                "input": [],
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Set payment method to: bank",
-                        "time": 23
-                    },
-                    {
-                        "type": "action",
-                        "message": "Set payment method to: card",
-                        "time": 30
-                    },
-                    {
-                        "type": "action",
-                        "message": "Set payment method to: bank",
-                        "time": 34
-                    },
-                    {
-                        "type": "action",
-                        "message": "Set payment method to: card",
-                        "time": 35
-                    },
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay with card",
-                        "time": 51
-                    },
-                    {
-                        "type": "success",
-                        "message": "Successfully paid with card",
-                        "time": 51
-                    }
-                ]
-            },
-            "fees": 150,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": "AUTH_0hjbvkmopd",
-                "bin": "408408",
-                "last4": "4081",
-                "exp_month": "12",
-                "exp_year": "2020",
-                "channel": "card",
-                "card_type": "visa DEBIT",
-                "bank": "Test Bank",
-                "country_code": "NG",
-                "brand": "visa",
-                "reusable": true,
-                "signature": "SIG_o8vnp6wjx5AxwX02WTR0",
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": "2019-11-29T19:10:12.000Z",
-            "createdAt": "2019-11-29T19:09:21.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361257587,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "Bp33eqt7StiVhQD",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T19:08:33.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": null,
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T19:08:33.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361257441,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "PUWD-EKOSkKMQEy",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T19:08:28.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": null,
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T19:08:28.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361252738,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "YfJC2lGBt8mQf7F",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T19:05:53.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": null,
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T19:05:53.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361245362,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "MCCRecLi5ee6qZs",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T19:01:41.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": {
-                "time_spent": 201,
-                "attempts": 2,
-                "authentication": null,
-                "errors": 0,
-                "success": false,
-                "mobile": false,
-                "input": [],
-                "channel": null,
-                "history": [
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay",
-                        "time": 36
-                    },
-                    {
-                        "type": "action",
-                        "message": "Attempted to pay",
-                        "time": 201
-                    }
-                ]
-            },
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T19:01:41.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361244842,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "7-07F58sUz4fTgB",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T19:01:21.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": null,
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T19:01:21.000Z",
-            "requested_amount": 10000
-        },
-        {
-            "id": 361239888,
-            "domain": "test",
-            "status": "abandoned",
-            "reference": "YcSwWR.frN3JoZl",
-            "amount": 10000,
-            "message": null,
-            "gateway_response": "The transaction was not completed",
-            "paid_at": null,
-            "created_at": "2019-11-29T18:58:23.000Z",
-            "channel": "card",
-            "currency": "NGN",
-            "ip_address": "41.75.81.246",
-            "metadata": {
-                "referrer": "http://localhost:3000/"
-            },
-            "log": null,
-            "fees": null,
-            "fees_split": null,
-            "customer": {
-                "id": 16784389,
-                "first_name": "Dare",
-                "last_name": "Joseph",
-                "email": "elduwani@gmail.com",
-                "phone": "8002229991",
-                "metadata": {
-                    "investment_start_date": "2019-11-29"
-                },
-                "customer_code": "CUS_eizo6unlnxtfoe3",
-                "risk_action": "default"
-            },
-            "authorization": {
-                "authorization_code": null,
-                "bin": null,
-                "last4": null,
-                "exp_month": null,
-                "exp_year": null,
-                "channel": null,
-                "card_type": null,
-                "bank": null,
-                "country_code": null,
-                "brand": null,
-                "reusable": false,
-                "signature": null,
-                "account_name": null
-            },
-            "plan": {},
-            "split": {},
-            "subaccount": {},
-            "order_id": null,
-            "paidAt": null,
-            "createdAt": "2019-11-29T18:58:23.000Z",
-            "requested_amount": 10000
         }
     ],
     "meta": {
-        "total": 61,
-        "total_volume": 6521000,
+        "total": 78,
+        "total_volume": 7290000,
         "skipped": 0,
         "perPage": 50,
         "page": 1,
