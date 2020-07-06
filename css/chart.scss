@@ -57,9 +57,9 @@ $bar-width: 50px;
     padding: 2rem;
     width: 1280px;
     margin: 0 auto;
-    // @include line;
     
-    .chart-wrapper{
+    .chart-wrapper, .canvas-wrapper{
+        // @include line;
         display: grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: repeat(10, 55px);
@@ -67,111 +67,113 @@ $bar-width: 50px;
         padding-top: 2rem;
         padding-right: 2rem;
 
-        .y-axis{
-            display: flex;
-            flex-direction: column-reverse;
-            grid-column: 1 / span 1;
-            grid-row: 1 / -2;
-            background: $clr-dark-3;
-            // border-right: 1px solid $clr-dark-5;
-            
-            > div{
-                // @include line;
-                flex: 1;
-                font-size: 0.7rem;
-                color: $clr-dark-6;
-                text-align: right;
-                padding: 0 1rem;
-            }
-        }
         
-        .graph, .x-axis{
-            display: flex;
-            
-            > div{
-                flex: 1;
-                max-width: $bar-width * 3;
-            }
-        }
-    
-        .graph{
-            padding: 8px 16px;
-            padding-bottom: 0;
-            grid-column: 2 / -1;
-            grid-row: 1 / -2;
-            background-color: $clr-dark-3;
-            position: relative;
-    
-            .bar-container{
-                height: 100%;
-                display: flex;
-                justify-content: flex-end;
-                flex-direction: column;
-                align-items: center;
-                z-index: 10;
-                // @include border($clr-dark-5);
-    
-                > div {
-                    width: 70%;
-                    color: #fff;
-                    text-align: center;
-                    background-color: $clr-dark-5;
-                    font-size: 0.7rem;
-                    position: relative;
-                    
-                    &:empty{
-                        height: 3px;
-                        background: red;
-                    }
-    
-                    span{
-                        position: absolute;
-                        top: -20px;
-                        left: 0;
-    
-                    }
-                }
-            }
-
-            .grid-container{
-                top: 0;
-                left: 0;
-                height: 100%;
-                min-width: 100%;
-                display: flex;
-                z-index: 1;
-                // @include border($clr-dark-5);
-                position: absolute;
-                flex-direction: column;
-
-                > div{
-                    flex: 1;
-                    border-top: 1px solid $clr-dark-5;
-                }
-            }
-        }
-        
-        .x-axis{
-            grid-column: 2 / -1;
-            background-color: $clr-dark-4;
-            border-top: 1px solid $clr-dark-5;
-            padding: 8px 16px;
-            padding-bottom: 0;
-    
-            > div {
-                // @include border(orange);
-                
-                div{
-                    // @include border(green);
-                    color: $clr-dark-6;
-                    text-align: center;
-                    font-size: 0.7rem;
-                }
-            }
-        }
-
         &.rotateLabels{
             @include rotateLabels($breakword: true);
+        }
+    }
+
+    .y-axis, .canvas-y-axis{
+        display: flex;
+        flex-direction: column-reverse;
+        grid-column: 1 / span 1;
+        grid-row: 1 / -2;
+        background: $clr-dark-3;
+        // border-right: 1px solid $clr-dark-5;
+        
+        > div{
+            // @include line;
+            flex: 1;
+            font-size: 0.7rem;
+            color: $clr-dark-6;
+            text-align: right;
+            padding: 0 1rem;
+        }
+    }
+
+    .graph, .x-axis, .canvas-graph, .canvas-x-axis{
+        display: flex;
+        
+        > div{
+            flex: 1;
+            max-width: $bar-width * 3;
+        }
+    }
+
+    .graph, .canvas-graph{
+        padding: 8px 16px;
+        padding-bottom: 0;
+        grid-column: 2 / -1;
+        grid-row: 1 / -2;
+        background-color: $clr-dark-3;
+        position: relative;
+        // @include line;
+
+        .bar-container{
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+            // @include border($clr-dark-5);
+
+            > div {
+                width: 70%;
+                color: #fff;
+                text-align: center;
+                background-color: $clr-dark-5;
+                font-size: 0.7rem;
+                position: relative;
+                
+                &:empty{
+                    height: 3px;
+                    background: red;
+                }
+
+                span{
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+
+                }
+            }
+        }
+
+        .grid-container{
+            top: 0;
+            left: 0;
+            height: 100%;
+            min-width: 100%;
+            display: flex;
+            z-index: 1;
+            // @include border($clr-dark-5);
+            position: absolute;
+            flex-direction: column;
+
+            > div{
+                flex: 1;
+                border-top: 1px solid $clr-dark-5;
+            }
+        }
+    }
+    
+    .x-axis, .canvas-x-axis{
+        grid-column: 2 / -1;
+        background-color: $clr-dark-4;
+        border-top: 1px solid $clr-dark-5;
+        padding: 8px 16px;
+        padding-bottom: 0;
+
+        > div {
+            // @include border(orange);
+            
+            div{
+                // @include border(green);
+                color: $clr-dark-6;
+                text-align: center;
+                font-size: 0.7rem;
+            }
         }
     }
 
@@ -207,18 +209,15 @@ $bar-width: 50px;
 }
 
 // Canvas
-.canvas_wrapper{
-    width: 100%;
-    // height: 100%;
-    display: grid;
-    place-items: center;
+.canvas-wrapper{
     overflow: hidden;
     margin: 1rem 0;
     @include line;
-    // background-color: #54447b;
 
-    canvas{
-        @include line($clr_dark_3);
-        // background-color: #54447b;
+    .canvas-graph{
+        padding: 0; 
+        display: block;
+        // padding-bottom: 2rem;
+        // @include line;
     }
 }

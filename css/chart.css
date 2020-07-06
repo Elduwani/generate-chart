@@ -27,7 +27,7 @@ html, body {
   margin: 0 auto;
 }
 
-.container .chart-wrapper {
+.container .chart-wrapper, .container .canvas-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[16];
@@ -39,7 +39,20 @@ html, body {
   padding-right: 2rem;
 }
 
-.container .chart-wrapper .y-axis {
+.container .chart-wrapper.rotateLabels .x-axis > div div, .container .canvas-wrapper.rotateLabels .x-axis > div div {
+  font-size: 10px;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  -webkit-transform-origin: 80% 30%;
+          transform-origin: 80% 30%;
+  white-space: "normal";
+  word-break: "break-word";
+  word-wrap: "break-word";
+  text-align: "right";
+  max-width: 50px;
+}
+
+.container .y-axis, .container .canvas-y-axis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +67,7 @@ html, body {
   background: #22222c;
 }
 
-.container .chart-wrapper .y-axis > div {
+.container .y-axis > div, .container .canvas-y-axis > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -64,20 +77,20 @@ html, body {
   padding: 0 1rem;
 }
 
-.container .chart-wrapper .graph, .container .chart-wrapper .x-axis {
+.container .graph, .container .x-axis, .container .canvas-graph, .container .canvas-x-axis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .chart-wrapper .graph > div, .container .chart-wrapper .x-axis > div {
+.container .graph > div, .container .x-axis > div, .container .canvas-graph > div, .container .canvas-x-axis > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   max-width: 150px;
 }
 
-.container .chart-wrapper .graph {
+.container .graph, .container .canvas-graph {
   padding: 8px 16px;
   padding-bottom: 0;
   grid-column: 2 / -1;
@@ -86,7 +99,7 @@ html, body {
   position: relative;
 }
 
-.container .chart-wrapper .graph .bar-container {
+.container .graph .bar-container, .container .canvas-graph .bar-container {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,7 +117,7 @@ html, body {
   z-index: 10;
 }
 
-.container .chart-wrapper .graph .bar-container > div {
+.container .graph .bar-container > div, .container .canvas-graph .bar-container > div {
   width: 70%;
   color: #fff;
   text-align: center;
@@ -113,18 +126,18 @@ html, body {
   position: relative;
 }
 
-.container .chart-wrapper .graph .bar-container > div:empty {
+.container .graph .bar-container > div:empty, .container .canvas-graph .bar-container > div:empty {
   height: 3px;
   background: red;
 }
 
-.container .chart-wrapper .graph .bar-container > div span {
+.container .graph .bar-container > div span, .container .canvas-graph .bar-container > div span {
   position: absolute;
   top: -20px;
   left: 0;
 }
 
-.container .chart-wrapper .graph .grid-container {
+.container .graph .grid-container, .container .canvas-graph .grid-container {
   top: 0;
   left: 0;
   height: 100%;
@@ -140,14 +153,14 @@ html, body {
           flex-direction: column;
 }
 
-.container .chart-wrapper .graph .grid-container > div {
+.container .graph .grid-container > div, .container .canvas-graph .grid-container > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   border-top: 1px solid #343748;
 }
 
-.container .chart-wrapper .x-axis {
+.container .x-axis, .container .canvas-x-axis {
   grid-column: 2 / -1;
   background-color: #282a36;
   border-top: 1px solid #343748;
@@ -155,23 +168,10 @@ html, body {
   padding-bottom: 0;
 }
 
-.container .chart-wrapper .x-axis > div div {
+.container .x-axis > div div, .container .canvas-x-axis > div div {
   color: #9b9fab;
   text-align: center;
   font-size: 0.7rem;
-}
-
-.container .chart-wrapper.rotateLabels .x-axis > div div {
-  font-size: 10px;
-  -webkit-transform: rotate(-60deg);
-          transform: rotate(-60deg);
-  -webkit-transform-origin: 80% 30%;
-          transform-origin: 80% 30%;
-  white-space: "normal";
-  word-break: "break-word";
-  word-wrap: "break-word";
-  text-align: "right";
-  max-width: 50px;
 }
 
 .container .controls {
@@ -207,17 +207,14 @@ html, body {
   color: #888;
 }
 
-.canvas_wrapper {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+.canvas-wrapper {
   overflow: hidden;
   margin: 1rem 0;
   outline: 1px solid red;
 }
 
-.canvas_wrapper canvas {
-  outline: #22222c solid red;
+.canvas-wrapper .canvas-graph {
+  padding: 0;
+  display: block;
 }
 /*# sourceMappingURL=chart.css.map */

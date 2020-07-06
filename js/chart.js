@@ -26,6 +26,8 @@ const state = {
 displayChart(filterOptions[0].value)
 generateSelect(filterOptions)
 
+drawLineChart(state)
+
 function displayChart(count) {
     let today = new Date()
     let numOfDays = count
@@ -55,7 +57,7 @@ function displayChart(count) {
     generateColumns()
 
     const count_display_node = document.querySelector(".count-display")
-    count_display_node.textContent = `Data: ${state.count} - Entries: ${state.map.size}`
+    count_display_node.textContent = `Days: ${state.count} - Entries: ${state.map.size}`
 
 }
 
@@ -147,7 +149,6 @@ function getPreviousCalendarDays(num = 60) {
 }
 
 function aggregateTransactions() {
-    // console.log(state.map)
     const x_axis = document.querySelector(".x-axis")
     x_axis.innerHTML = ""
 
@@ -303,7 +304,7 @@ function getClosestNumArray(num, arrLength) {
     return [array, max]
 }
 
-function metricPrefix(number) {
+export function metricPrefix(number) {
     const num = Math.abs(number)
     //Must start from largest number so it doesn't return lower true condition
     if (num > 999999999) return Math.sign(num) * ((num / 1000000000).toFixed(2)) + 'B'

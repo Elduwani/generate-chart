@@ -1,56 +1,67 @@
-const canvas = document.createElement("canvas")
-const cSize = 700
-canvas.height = cSize / 1.2
-canvas.width = cSize
+const canvas = document.getElementById("canvas")
+const cWidth = canvas.parentElement.offsetWidth
+const cHeight = canvas.parentElement.offsetHeight
+canvas.height = cHeight
+canvas.width = cWidth
 
+// console.log(cWidth, canvas.parentElement)
 const c = canvas.getContext("2d")
 
-const clr_bgColor = "#54447b"
-const clr_bgColor_light = "#695699"
-const clr_green = "#49b47e"
-const clr_green_2 = "#94dd4d"
-const clr_yellow = "#ffd944"
+const clr_dark_3 = "#22222c"
+const clr_dark_4 = "#282a36"
+const clr_dark_5 = "#343748"
+const clr_dark_6 = "#9b9fab"
 
 // // c.strokeRect(20, 20, 20, 20)
 
-// displayGrid()
-// drawChart()
+export function drawLineChart(data) {
+    let { maxAmount, map } = data,
+        count = map.size,
+        size = Math.floor(cWidth / count),
+        pointsArray = [],
+        radius = 8
 
-export function drawLineChart() {
-    let count = 10,
-        size = Math.floor(cSize / count),
-        pointsArray = []
+    displayGrid(data.yLength)
 
     c.beginPath()
-    c.strokeStyle = clr_yellow
-    c.lineWidth = 1
+    c.strokeStyle = clr_dark_5
+    c.lineWidth = 2
 
-    for (let i = 0; i <= count; i++) {
-        let x = size * i,
-            y = Math.floor(Math.random() * (cSize / 2)) + size,
-            value = 30,
-            offset = i === 0 ? value : i === 10 ? -value : 0
+    let i = 0; //Map.forEach doesn't provide the "index" argument
+    data.map.forEach((value, key) => {
+        let x = size * i, limit = 30,
+            offset = i === 0 ? limit : 0,
+            amount = value.total,
+            percent = Math.trunc((amount / maxAmount) * 100),
+            isNull = amount < 1
+
+        /**
+         * the [y] coord goes top (0) -> bottom (canvas height)
+         * Reverse it so 0 is at the bottom by removing the height
+        */
+        let y = cHeight - ((cHeight / 100) * percent)
+        if (isNull) y = y - radius
 
         x = x + offset
         c.lineTo(x, y)
-        pointsArray.push({ x, y })
-    }
+        pointsArray.push({ x, y, amount: value.total, isNull })
+
+        i++
+    })
 
     c.stroke()
     c.closePath()
 
     //draw circles...
-    pointsArray.forEach((p, i) => {
-        let offsetValue = 20,
-            nextY = pointsArray[i + 1] ? pointsArray[i + 1].y : 0,
-            // radius = 3 + (Math.random() * 8),
-            radius = 8,
-            trendingUp = p.y > nextY
+    pointsArray.forEach(point => {
+        let { x, y, amount, isNull } = point
+        // nextY = pointsArray[i + 1] ? pointsArray[i + 1].y : 0,
+        // radius = 3 + (Math.random() * 8),
 
         c.beginPath()
-        c.strokeStyle = clr_green_2
-        c.fillStyle = clr_bgColor
-        c.arc(p.x, p.y, radius, 0, Math.PI * 2, false)
+        c.strokeStyle = isNull ? clr_dark_4 : clr_dark_5
+        c.fillStyle = isNull ? clr_dark_3 : clr_dark_4
+        c.arc(x, y, radius, 0, Math.PI * 2, false)
         c.fill()
 
         c.fillStyle = "white"
@@ -58,38 +69,38 @@ export function drawLineChart() {
         c.textAlign = "center"
         c.textBaseline = "middle"
         c.fillText(
-            String(cSize - p.y),
-            p.x,
-            trendingUp ? p.y + offsetValue : p.y - offsetValue
+            !isNull ?
+                String(amount.toLocaleString("en"))
+                : ""
+            ,
+            x, y - 20
+            // trendingUp ? p.y + offsetValue : p.y - offsetValue
         );
 
         c.stroke()
         c.closePath()
+        // console.log(amount)
     })
 }
 
 //draw grid guides on the canvas
-export function displayGrid() {
-    let count = 10
-
+export function displayGrid(count = 10) {
     for (let i = 0; i <= count; i++) {
-        c.lineWidth = 0.5
-        c.strokeStyle = clr_bgColor_light
-
-        let pointV = Math.floor(cSize / count) * i
-        let pointH = Math.floor(cSize / count) * i
+        c.lineWidth = 0.2
+        c.strokeStyle = clr_dark_5
+        let pointH = Math.floor(cHeight / count) * i
 
         /* vertical lines */
         // c.beginPath()
         // c.moveTo(pointV, 0)
-        // c.lineTo(pointV, cSize)
+        // c.lineTo(pointV, cHeight)
         // c.stroke()
         // c.closePath()
 
         /* horiontal lines */
         c.beginPath()
         c.moveTo(0, pointH)
-        c.lineTo(cSize, pointH)
+        c.lineTo(cWidth, pointH)
         c.stroke()
         c.closePath()
     }
