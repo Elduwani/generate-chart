@@ -1,5 +1,5 @@
 import transactions from "./data.js"
-import { drawLineChart, displayGrid } from "./canvas.js"
+import { drawLineChart } from "./canvas.js"
 
 const chartWrapper_node = document.querySelector(".chart-wrapper")
 
@@ -26,7 +26,6 @@ const state = {
 displayChart(filterOptions[0].value)
 generateSelect(filterOptions)
 
-drawLineChart(state)
 
 function displayChart(count) {
     let today = new Date()
@@ -45,8 +44,8 @@ function displayChart(count) {
 
     /**
      * Initial Map with default values
-    */
-    let dates = getPreviousCalendarDays(+numOfDays)
+     */
+    getPreviousCalendarDays(+numOfDays)
     state.count = +numOfDays
 
     /**
@@ -55,6 +54,7 @@ function displayChart(count) {
     aggregateTransactions()
     // This must be called last as it depends on {state.data} to be updated
     generateColumns()
+    drawLineChart(state)
 
     const count_display_node = document.querySelector(".count-display")
     count_display_node.textContent = `Days: ${state.count} - Entries: ${state.map.size}`
@@ -304,7 +304,7 @@ function getClosestNumArray(num, arrLength) {
     return [array, max]
 }
 
-export function metricPrefix(number) {
+function metricPrefix(number) {
     const num = Math.abs(number)
     //Must start from largest number so it doesn't return lower true condition
     if (num > 999999999) return Math.sign(num) * ((num / 1000000000).toFixed(2)) + 'B'

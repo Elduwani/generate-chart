@@ -212,7 +212,7 @@ $bar-width: 50px;
 .canvas-wrapper{
     overflow: hidden;
     margin: 1rem 0;
-    @include line;
+    // @include line;
 
     .canvas-graph{
         padding: 0; 

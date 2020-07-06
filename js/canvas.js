@@ -10,27 +10,29 @@ const c = canvas.getContext("2d")
 const clr_dark_3 = "#22222c"
 const clr_dark_4 = "#282a36"
 const clr_dark_5 = "#343748"
-const clr_dark_6 = "#9b9fab"
+
+const colors = ["#6151bb", "#67ba6d", "#f38181", "#8aacff", "#d7f096",]
 
 // // c.strokeRect(20, 20, 20, 20)
-
 export function drawLineChart(data) {
+    c.clearRect(0, 0, cWidth, cHeight)
+
     let { maxAmount, map } = data,
         count = map.size,
         size = Math.floor(cWidth / count),
+        color = colors[0],
         pointsArray = [],
         radius = 8
 
     displayGrid(data.yLength)
 
     c.beginPath()
-    c.strokeStyle = clr_dark_5
-    c.lineWidth = 2
+    c.strokeStyle = color
+    c.lineWidth = 1
 
     let i = 0; //Map.forEach doesn't provide the "index" argument
-    data.map.forEach((value, key) => {
-        let x = size * i, limit = 30,
-            offset = i === 0 ? limit : 0,
+    data.map.forEach(value => {
+        let x = size * i,
             amount = value.total,
             percent = Math.trunc((amount / maxAmount) * 100),
             isNull = amount < 1
@@ -42,7 +44,8 @@ export function drawLineChart(data) {
         let y = cHeight - ((cHeight / 100) * percent)
         if (isNull) y = y - radius
 
-        x = x + offset
+        //offset everything by 20 on the x
+        x = x + 20
         c.lineTo(x, y)
         pointsArray.push({ x, y, amount: value.total, isNull })
 
@@ -55,16 +58,14 @@ export function drawLineChart(data) {
     //draw circles...
     pointsArray.forEach(point => {
         let { x, y, amount, isNull } = point
-        // nextY = pointsArray[i + 1] ? pointsArray[i + 1].y : 0,
-        // radius = 3 + (Math.random() * 8),
 
         c.beginPath()
-        c.strokeStyle = isNull ? clr_dark_4 : clr_dark_5
-        c.fillStyle = isNull ? clr_dark_3 : clr_dark_4
-        c.arc(x, y, radius, 0, Math.PI * 2, false)
+        c.strokeStyle = isNull ? color : colors[3]
+        c.fillStyle = isNull ? clr_dark_3 : colors[0]
+        c.arc(x, y, isNull ? radius / 1.5 : radius, 0, Math.PI * 2, false)
         c.fill()
 
-        c.fillStyle = "white"
+        c.fillStyle = colors[4]
         c.font = `11px Roboto, Montserrat, san-serif`;
         c.textAlign = "center"
         c.textBaseline = "middle"
@@ -104,4 +105,12 @@ export function displayGrid(count = 10) {
         c.stroke()
         c.closePath()
     }
+}
+
+export function randomIntFromRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+export function randomColor(colors) {
+    return colors[Math.floor(Math.random() * colors.length)]
 }
