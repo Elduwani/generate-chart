@@ -197,7 +197,7 @@ function aggregateTransactions() {
     /**
      * Populate y-axis
     */
-    const [yArray, limit] = getClosestNumArray(maxAmount, state.yLength)
+    const [yArray, limit] = getClosestNumArray(Math.max(10000, maxAmount), state.yLength)
     const y_axis = document.querySelector(".y-axis")
     y_axis.innerHTML = ""
     state.maxAmount = limit

@@ -1,10 +1,15 @@
 const canvas = document.getElementById("canvas")
+const canvas_x = document.getElementById("x-axis")
 const cWidth = canvas.parentElement.offsetWidth
 const cHeight = canvas.parentElement.offsetHeight
 canvas.height = cHeight
 canvas.width = cWidth
+canvas_x.height = canvas_x.parentElement.clientHeight
+canvas_x.width = canvas_x.parentElement.clientWidth
 
 const c = canvas.getContext("2d")
+const cx = canvas_x.getContext("2d")
+
 const clr_dark_3 = "#22222c"
 const clr_dark_4 = "#282a36"
 const clr_dark_5 = "#343748"
@@ -77,15 +82,17 @@ class Particle {
 }
 
 export function chartInit(data) { // init()
+    console.log("init called")
     //reset state
     state.particlesArray = []
+    cx.clearRect(0, 0, canvas_x.width, canvas_x.height)
 
     let { maxAmount, map } = data,
         radius = 8, count = map.size,
         size = Math.floor(canvas.width / count)
 
     let i = 0; //Map.forEach doesn't provide the "index" argument
-    data.map.forEach(value => {
+    data.map.forEach((value, key) => {
         let x = size * i,
             amount = value.total,
             percent = Math.trunc((amount / maxAmount) * 100),
@@ -98,10 +105,25 @@ export function chartInit(data) { // init()
         let y = canvas.height - ((canvas.height / 100) * percent)
         if (isNull) y = y - radius
 
-        //offset everything by 20 on the x
-        x = x + 20
-        // c.lineTo(x, y)
-        const element = new Particle(x, y, { amount: value.total, isNull })
+        //offset x to the right
+        x = x + 10
+
+        /**
+         * Draw x-axis
+        */
+        const w = (canvas_x.width / data.map.size) - 15 //margin-right
+        const centerX = x + (w / 2)
+
+        // cx.lineWidth = 2
+        // cx.strokeStyle = clr_dark_5
+        // cx.strokeRect(x, 10, w, canvas_x.height)
+
+        cx.fillStyle = "#aaa"
+        cx.font = `11px Roboto, Montserrat, san-serif`;
+        cx.textAlign = "center"
+        cx.fillText(key, centerX, 20);
+
+        const element = new Particle(centerX, y, { amount: value.total, isNull })
         state.particlesArray.push(element)
         i++
     })
@@ -112,14 +134,9 @@ animate()
 /**
  * 
  * 
- * 
- * 
- * 
- * 
- */
+*/
 
 function animate() {
-    // console.log(particlesArray)
     requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height)
     state.particlesArray.forEach((particle, i, arr) => particle.update(arr[i + 1]))
