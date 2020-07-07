@@ -1,5 +1,5 @@
 import transactions from "./data.js"
-import { drawLineChart } from "./canvas.js"
+import { chartInit } from "./canvas.js"
 
 const chartWrapper_node = document.querySelector(".chart-wrapper")
 
@@ -54,7 +54,7 @@ function displayChart(count) {
     aggregateTransactions()
     // This must be called last as it depends on {state.data} to be updated
     generateColumns()
-    drawLineChart(state)
+    chartInit(state)
 
     const count_display_node = document.querySelector(".count-display")
     count_display_node.textContent = `Days: ${state.count} - Entries: ${state.map.size}`
