@@ -58,7 +58,6 @@ function displayChart(count) {
 
     const count_display_node = document.querySelector(".count-display")
     count_display_node.textContent = `Days: ${state.count} - Entries: ${state.map.size}`
-
 }
 
 function getPreviousCalendarDays(num = 60) {

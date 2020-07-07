@@ -9,34 +9,55 @@ const clr_dark_3 = "#22222c"
 const clr_dark_4 = "#282a36"
 const clr_dark_5 = "#343748"
 
-const colors = ["#6151bb", "#67ba6d", "#f38181", "#8aacff", "#d7f096",]
-let particlesArray = [], gravity = 1, friction = 0.005
+const state = {
+    colors: ["#6151bb", "#67ba6d", "#f38181", "#8aacff", "#d7f096"],
+    particlesArray: [],
+    friction: 0.005,
+    gravity: 0.005
+}
 
 class Particle {
     constructor(x, y, data) {
         this.x = x
         this.y = y
-        this.dy = 1
-        this.radius = 10
-        this.to = y + randomIntFromRange(30, 80)
+        this.dy = 0.1
+        this.radius = 8
         this.data = data
+        this.origPos = { x, y }
         this.color = randomColor()
+        this.to = y + randomIntFromRange(2, 15)
     }
-    update() {
-        if (this.y + this.dy > this.to) {
+    update(nextParticle) {
+        if (this.y + this.dy > this.to || this.y + this.radius + this.dy > canvas.height) {
             this.dy = -this.dy
-        } else this.dy += gravity
+        } else this.dy += state.gravity
 
-        this.y += this.dy * friction
-        this.draw()
+        this.y += this.dy
+        // nextParticle && console.log(nextParticle.x)
+        this.draw(nextParticle)
     }
-    draw() {
+    draw(nextParticle) {
+        /**
+         * Draw connecting line to next sibling
+        */
+        if (nextParticle) {
+            const { x, y } = nextParticle
+
+            c.beginPath()
+            c.lineWidth = 2
+            c.strokeStyle = clr_dark_4
+            c.moveTo(this.x, this.y)
+            c.lineTo(x, y)
+            c.stroke()
+            c.closePath()
+        }
+
         let { amount, isNull } = this.data
 
         c.beginPath()
         c.lineWidth = 1
 
-        c.strokeStyle = isNull ? clr_dark_5 : this.color
+        isNull ? c.strokeStyle = clr_dark_5 : null
         c.fillStyle = isNull ? clr_dark_4 : this.color
         c.arc(this.x, this.y, isNull ? this.radius / 1.5 : this.radius, 0, Math.PI * 2, false)
         c.fill()
@@ -47,15 +68,18 @@ class Particle {
         c.textBaseline = "middle"
         c.fillText(
             !isNull ? String(amount.toLocaleString("en")) : "",
-            this.x, this.y - (this.radius * 2)
+            this.x, this.y - (this.radius * 2.2)
         );
 
-        c.stroke()
+        isNull && c.stroke()
         c.closePath()
     }
 }
 
 export function chartInit(data) { // init()
+    //reset state
+    state.particlesArray = []
+
     let { maxAmount, map } = data,
         radius = 8, count = map.size,
         size = Math.floor(canvas.width / count)
@@ -78,18 +102,27 @@ export function chartInit(data) { // init()
         x = x + 20
         // c.lineTo(x, y)
         const element = new Particle(x, y, { amount: value.total, isNull })
-        particlesArray.push(element)
+        state.particlesArray.push(element)
         i++
     })
-
-    animate()
 }
+
+animate()
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 
 function animate() {
     // console.log(particlesArray)
     requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height)
-    particlesArray.forEach(particle => particle.update())
+    state.particlesArray.forEach((particle, i, arr) => particle.update(arr[i + 1]))
 }
 
 //draw grid guides on the canvas
@@ -120,5 +153,5 @@ export function randomIntFromRange(min, max) {
 }
 
 export function randomColor() {
-    return colors[Math.floor(Math.random() * colors.length)]
+    return state.colors[Math.floor(Math.random() * state.colors.length)]
 }
